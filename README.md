@@ -1,7 +1,9 @@
-# Project Capstone
-Project Name: **"APLIKASI SAIKO"**
-# Project Themes: **Economics Empowerment: Navigating Sustainable Economies for All**
-# Project Team Members:				
+# Capstone
+## Project Name: 
+**"APLIKASI SAIKO"**
+## Project Themes:
+**Economics Empowerment: Navigating Sustainable Economies for All**
+## Project Team Members:				
 Raihan Fawwaz Andien (C296D4KY0030) - Cloud Computing - UPN Veteran Jawa Timur		
 Ilham Firmansyah (C296D4KY0031) - Cloud Computing - UPN Veteran Jawa Timur		
 Zahra Maharani Aulia (A206D4KX3883) - Mobile Development - Universitas Halu Oleo		
