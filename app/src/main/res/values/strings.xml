@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Saiko</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="saiko">SAIKO</string>
+    <string name="shop_everything">Shop everything you need</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="footer_text">By logging in you accept our</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="and">and</string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>
