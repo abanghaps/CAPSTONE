@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Saiko"
         tools:targetApi="31">
         <activity
+            android:name=".view.register.RegisterActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:exported="true"/>
+        <activity
             android:name=".view.welcome.WelcomeActivity"
             android:exported="true"/>
         <activity

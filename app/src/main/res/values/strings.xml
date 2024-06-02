@@ -9,4 +9,16 @@
     <string name="terms_of_use">Terms Of Use</string>
     <string name="and">and</string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="create_a_new_account">Create A New Account</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_confirm_password">Enter your confirm password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="to_continue">TO CONTINUE</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_a_account">Don\'t have a account?</string>
+    <string name="register">Register</string>
 </resources>
