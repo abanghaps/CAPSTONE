@@ -12,4 +12,13 @@
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">0dp</item>
     </style>
+
+<!-- Bottom Nav menu   -->
+    <style name="Nav.Menu.Saiko" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:layout_gravity">
+            bottom
+        </item>
+    </style>
+
 </resources>

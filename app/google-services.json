@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046225680002",
+    "project_id": "saikoauth",
+    "storage_bucket": "saikoauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046225680002:android:a2d0001a61efdb433c269b",
+        "android_client_info": {
+          "package_name": "com.dicoding.capstone.saiko"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiOD7_g5W8Ou3GHIgfKxzm1BFqQBCju4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -58,4 +59,11 @@ dependencies {
     implementation ("androidx.compose.ui:ui-tooling-preview:1.6.7")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
     implementation ("androidx.activity:activity-compose:1.9.0")
+
+        //Firebase//
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation("com.google.firebase:firebase-auth")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
 }

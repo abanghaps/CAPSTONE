@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.capstone.saiko.R
-import com.dicoding.capstone.saiko.view.welcome.WelcomeActivity
+import com.dicoding.capstone.saiko.view.login.LoginActivity
 
 @SuppressLint("CustomSplashScreen")
 @Suppress("DEPRECATION")
@@ -19,7 +19,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Handler().postDelayed({ // Create an Intent that will start the WelcomeActivity.
             val mainIntent = Intent(
                 this@SplashScreenActivity,
-                WelcomeActivity::class.java
+                LoginActivity::class.java
             )
             this@SplashScreenActivity.startActivity(mainIntent)
             finish()

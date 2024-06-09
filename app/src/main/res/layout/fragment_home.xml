@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/home_fragment_layout"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- Search bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_background"
+            android:drawableStart="@drawable/ic_search"
+            android:hint="Telusuri"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cat_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilihan Kategori"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Category Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Example category buttons -->
+        <ImageButton
+            android:id="@+id/category_fish"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_background_selector"
+            android:src="@drawable/ic_ikan"
+            android:contentDescription="Ikan" />
+
+        <!-- Vegetables Category Button -->
+        <ImageButton
+            android:id="@+id/category_vegetables"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_background_selector"
+            android:src="@drawable/ic_sayur"
+            android:contentDescription="Sayuran" />
+    </LinearLayout>
+
+    <!-- Selected Category Text -->
+    <TextView
+        android:id="@+id/selected_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sayur-sayuran"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- GridView -->
+    <GridView
+        android:id="@+id/gridview_fruits"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="8dp"
+        android:numColumns="3"
+        android:padding="8dp"
+        android:verticalSpacing="8dp"
+        tools:listitem="@layout/grid_item" />
+</LinearLayout>
