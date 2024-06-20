@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.dicoding.capstone.saiko.BuildConfig
 import com.dicoding.capstone.saiko.R
 import com.dicoding.capstone.saiko.data.remote.ApiConfig
 import com.dicoding.capstone.saiko.data.remote.StoryResponse
@@ -108,7 +109,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun fetchStories() {
-        val token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLW5QU0pMZVdCRGpjeFZFaGsiLCJpYXQiOjE3MTY3MjQ3MzB9.-yYAAbITuF6WQY1xAvqtSqkcIlA13XVqzSUAJJYE_B4"
+        val token = BuildConfig.API_TOKEN
         val client = ApiConfig.getApiService().getStories(token)
         client.enqueue(object : Callback<StoryResponse> {
             override fun onResponse(call: Call<StoryResponse>, response: Response<StoryResponse>) {

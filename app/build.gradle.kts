@@ -14,6 +14,9 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        buildConfigField("String", "BASE_URL", "\"https://capstone-project13.et.r.appspot.com/v1/\"")
+        buildConfigField("String", "API_TOKEN", "\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLW5QU0pMZVdCRGpjeFZFaGsiLCJpYXQiOjE3MTY3MjQ3MzB9.-yYAAbITuF6WQY1xAvqtSqkcIlA13XVqzSUAJJYE_B4\"")
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
