@@ -11,7 +11,6 @@ import com.dicoding.capstone.saiko.view.main.fragment.ChatFragment
 import com.dicoding.capstone.saiko.view.main.fragment.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")

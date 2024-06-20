@@ -30,6 +30,20 @@
     <string name="category2">Category 2</string>
     <string name="category3">Category 3</string>
     <string name="category4">Category 4</string>
+    <string name="image_classifier_failed">Image classifier failed to initialize. See error logs for details</string>
+    <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
+    <string name="application_id">com.dicoding.capstone.saiko</string>
+    <string name="detail_name_user">Nama</string>
+    <string name="detail_desc_user">deskripsi</string>
+    <string name="detail_desc_foto">foto</string>
+    <string name="message_text">Message Text</string>
+    <string name="message_time">Message Time</string>
+    <string name="chat_name">Name</string>
+    <string name="chat_last_message">Last message</string>
+    <string name="chat_time">12:00</string>
+    <string name="guest_warning_message">Maaf Anda belum terdaftar sebagai penjual. Silahkan isi biodata diri Anda terlebih dahulu dan mulai berjualan!!</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_with_guest_account">Login with guest account</string>
 </resources>
