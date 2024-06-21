@@ -8,6 +8,7 @@ import java.io.IOException
 import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
 
+@Suppress("DEPRECATION")
 class TFLiteHelper(context: Context) {
 
     private var interpreter: Interpreter

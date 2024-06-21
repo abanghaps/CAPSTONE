@@ -1,5 +1,6 @@
 package com.dicoding.capstone.saiko.view.chat
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
@@ -32,6 +33,7 @@ class ChatDetailActivity : AppCompatActivity() {
 
     private fun loadMessages() {
         database.addValueEventListener(object : ValueEventListener {
+            @SuppressLint("NotifyDataSetChanged")
             override fun onDataChange(snapshot: DataSnapshot) {
                 messages.clear()
                 for (dataSnapshot in snapshot.children) {
@@ -45,7 +47,6 @@ class ChatDetailActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Handle possible errors
             }
         })
     }

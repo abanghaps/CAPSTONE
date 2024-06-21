@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.capstone.saiko.R
-import com.dicoding.capstone.saiko.view.login.LoginActivity
 import com.dicoding.capstone.saiko.view.welcome.WelcomeActivity
 
 @SuppressLint("CustomSplashScreen")
@@ -16,8 +15,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        // Handler to start the WelcomeActivity and close this SplashScreenActivity after some seconds.
-        Handler().postDelayed({ // Create an Intent that will start the WelcomeActivity.
+        Handler().postDelayed({
             val mainIntent = Intent(
                 this@SplashScreenActivity,
                 WelcomeActivity::class.java
@@ -29,6 +27,6 @@ class SplashScreenActivity : AppCompatActivity() {
 
     companion object {
         private const val SPLASH_DISPLAY_LENGTH =
-            3000 // Duration for splash screen display in milliseconds (3 seconds)
+            3000
     }
 }

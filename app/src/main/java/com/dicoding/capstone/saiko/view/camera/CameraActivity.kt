@@ -28,11 +28,9 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun startCamera() {
-        // showCamera
     }
 
     private fun takePhoto() {
-        // takePhoto
     }
 
     private fun hideSystemUI() {

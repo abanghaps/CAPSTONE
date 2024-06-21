@@ -29,10 +29,11 @@ class StoriesAdapter(private val context: Context, private val stories: List<Sto
         val nameTextView: TextView = view.findViewById(R.id.text_fruit_name)
         val descriptionTextView: TextView = view.findViewById(R.id.text_fruit_price)
 
-        val imageUrl = "https://capstone-project13.et.r.appspot.com/" + story.photoUrl
+        val baseUrl = "https://capstone-project13.et.r.appspot.com/"
+        val imageUrl = baseUrl + story.photoUrl
         Log.d("StoriesAdapter", "Loading image: $imageUrl")
 
-        Glide.with(context)
+        Glide.with(imageView.context)
             .load(imageUrl)
             .centerCrop()
             .into(imageView)

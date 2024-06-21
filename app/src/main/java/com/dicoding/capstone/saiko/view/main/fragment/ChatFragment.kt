@@ -1,5 +1,6 @@
 package com.dicoding.capstone.saiko.view.main.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -39,6 +40,7 @@ class ChatFragment : Fragment() {
 
     private fun loadMessages() {
         database.addValueEventListener(object : ValueEventListener {
+            @SuppressLint("NotifyDataSetChanged")
             override fun onDataChange(snapshot: DataSnapshot) {
                 messages.clear()
                 for (dataSnapshot in snapshot.children) {
@@ -57,4 +59,3 @@ class ChatFragment : Fragment() {
         })
     }
 }
-//fragment

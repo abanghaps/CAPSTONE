@@ -20,12 +20,11 @@ import com.dicoding.capstone.saiko.databinding.ActivityAdddaganganBinding
 import com.dicoding.capstone.saiko.view.main.MainActivity
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.File
 
 class AddDaganganActivity : AppCompatActivity() {
 
@@ -115,7 +114,7 @@ class AddDaganganActivity : AppCompatActivity() {
                 requestImageFile
             )
 
-            val descriptionBody = RequestBody.create("text/plain".toMediaTypeOrNull(), description)
+            val descriptionBody = description.toRequestBody("text/plain".toMediaTypeOrNull())
 
             Log.d("AddDaganganActivity", "Request Image File: $requestImageFile")
             Log.d("AddDaganganActivity", "Image Multipart: $imageMultipart")

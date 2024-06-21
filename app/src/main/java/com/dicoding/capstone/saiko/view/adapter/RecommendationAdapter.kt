@@ -18,12 +18,8 @@ class RecommendationAdapter(private val context: Context, private val recommenda
     override fun getItemId(position: Int): Long = position.toLong()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view: View
-        if (convertView == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.grid_item, parent, false)
-        } else {
-            view = convertView
-        }
+        val view: View =
+            convertView ?: LayoutInflater.from(context).inflate(R.layout.grid_item, parent, false)
         val recommendationText = view.findViewById<TextView>(R.id.text_fruit_name)
         val recommendationPrice = view.findViewById<TextView>(R.id.text_fruit_price)
 

@@ -56,7 +56,6 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Save the username and phone number
                     val sharedPref = getSharedPreferences("USER_PREF", Context.MODE_PRIVATE)
                     with(sharedPref.edit()) {
                         putString("USER_NAME", username)

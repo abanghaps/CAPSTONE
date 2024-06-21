@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
     private lateinit var searchEditText: EditText
 
     private lateinit var auth: FirebaseAuth
-    private var isGuest: Boolean = true // Default value for guest
+    private var isGuest: Boolean = true
     private lateinit var tfliteHelper: TFLiteHelper
 
     @SuppressLint("MissingInflatedId")
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
         tfliteHelper = TFLiteHelper(requireContext())
 
         if (auth.currentUser != null) {
-            isGuest = false // User is logged in with Firebase
+            isGuest = false
         }
 
         selectedCategoryTextView = view.findViewById(R.id.selected_category)
@@ -63,7 +63,6 @@ class HomeFragment : Fragment() {
         addButton = view.findViewById(R.id.imageButton)
         searchEditText = view.findViewById(R.id.search_bar)
 
-        // Apply window insets to the main layout
         ViewCompat.setOnApplyWindowInsetsListener(view.findViewById(R.id.home_fragment_layout)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -71,14 +70,14 @@ class HomeFragment : Fragment() {
         }
 
         categoryFishButton.setOnClickListener {
-            selectedCategoryTextView.text = "Ikan Segar"
+            selectedCategoryTextView.text = getString(R.string.ikan_segar)
             categoryFishButton.setBackgroundResource(R.drawable.background_clicked)
             categoryVegetablesButton.setBackgroundResource(R.drawable.background_default)
             fetchStories()
         }
 
         categoryVegetablesButton.setOnClickListener {
-            selectedCategoryTextView.text = "Sayur-sayuran"
+            selectedCategoryTextView.text = getString(R.string.sayur_sayuran)
             categoryVegetablesButton.setBackgroundResource(R.drawable.background_clicked)
             categoryFishButton.setBackgroundResource(R.drawable.background_default)
             fetchStories()
@@ -102,7 +101,6 @@ class HomeFragment : Fragment() {
             }
         }
 
-        // Fetch initial stories
         fetchStories()
 
         return view
@@ -114,7 +112,7 @@ class HomeFragment : Fragment() {
         client.enqueue(object : Callback<StoryResponse> {
             override fun onResponse(call: Call<StoryResponse>, response: Response<StoryResponse>) {
                 if (response.isSuccessful) {
-                    val stories = response.body()?.stories ?: emptyList()
+                    val stories = response.body()?.listStory ?: emptyList()
                     gridView.adapter = StoriesAdapter(requireContext(), stories)
                 } else {
                     Toast.makeText(context, "Failed to load stories: ${response.message()}", Toast.LENGTH_SHORT).show()
@@ -135,8 +133,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun searchRecommendations(query: String) {
-        // Assuming input processing to match the TFLite model requirements
-        val input = FloatArray(1) { query.length.toFloat() } // Example input processing
+        val input = FloatArray(1) { query.length.toFloat() }
         val recommendations = tfliteHelper.predict(input)
         gridView.adapter = RecommendationAdapter(requireContext(), recommendations)
     }

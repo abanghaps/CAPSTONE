@@ -32,6 +32,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+@Suppress("DEPRECATION")
 class AccountFragment : Fragment() {
 
     private lateinit var profileNameTextView: TextView
@@ -60,7 +61,6 @@ class AccountFragment : Fragment() {
             showImagePickerDialog()
         }
 
-        // Set up click listeners for each option
         view.findViewById<LinearLayout>(R.id.layout_account_settings).setOnClickListener {
             showToast("Pengaturan Akun")
         }
@@ -142,6 +142,7 @@ class AccountFragment : Fragment() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
